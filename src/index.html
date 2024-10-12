@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="
-  Join 60,000+ product managers receiving monthly updates on:
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-"
+      content=" Join 60,000+ product managers receiving monthly updates on: Product discovery and building what matters Measuring to ensure updates are a success And much more!"
     />
     <meta name="author" content="geomydas" />
     <link
@@ -20,7 +15,22 @@
       href="../images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./output.css" />
-    <style></style>
+    <style>
+      @font-face {
+        font-display: swap;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        src: url("../fonts/roboto-v32-latin-regular.woff2") format("woff2");
+      }
+      @font-face {
+        font-display: swap;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        src: url("../fonts/roboto-v32-latin-700.woff2") format("woff2");
+      }
+    </style>
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
@@ -33,18 +43,16 @@
         class="md:grid md:max-w-3xl md:grid-cols-2 md:grid-rows-1 md:items-center md:gap-8 md:rounded-2xl md:bg-white md:p-8"
         id="part1"
       >
-        <picture class="w-full">
-          <source
+        <picture class="w-full"
+          ><source
             media="(min-width: 48rem)"
             srcset="../images/illustration-sign-up-desktop.svg"
-            class="w-full"
-          />
+            class="w-full" />
           <img
             src="../images/illustration-sign-up-mobile.svg"
             alt=""
             class="w-full"
-          />
-        </picture>
+        /></picture>
         <div class="py-6 px-4 md:-order-1 md:py-0 md:px-0">
           <h1 class="font-roboto text-darkslate mb-4 text-4xl font-bold">
             Stay updated!
@@ -82,10 +90,10 @@
                 class="flex items-center justify-between peer-[:user-invalid]:[&>span]:inline"
               >
                 <label
-                  class="font-roboto text-darkslate text-sm font-bold" for="email"
+                  class="font-roboto text-darkslate text-sm font-bold"
+                  for="email"
                   >Email address</label
-                >
-                <span
+                ><span
                   class="font-roboto text-tomato hidden text-sm font-bold"
                   aria-live="polite"
                   >Valid email required</span
@@ -93,7 +101,7 @@
               </div>
             </div>
             <button
-              id="submit  "
+              id="submit "
               type="submit"
               class="font-roboto bg-darkslate hover:bg-tomato hover:shadow-tomato block w-full rounded-lg py-3 px-2 text-center text-base font-bold text-white transition hover:shadow-lg"
             >
@@ -102,20 +110,18 @@
           </form>
         </div>
       </div>
-
       <div
         class="hidden min-h-screen flex-col justify-between py-8 px-4 md:min-h-0 md:max-w-sm md:rounded-2xl md:bg-white md:py-6 md:px-6"
         id="part2"
       >
         <div>
           <img src="../images/icon-success.svg" alt="" class="mb-12" />
-
           <h2 class="font-roboto text-darkslate mb-8 text-4xl font-bold">
             Thanks for subscribing!
           </h2>
           <p class="font-roboto text-base font-normal md:mb-12">
             A confirmation email has been sent to
-            <strong id="confirmation-email"></strong> Please open it and click
+            <strong id="confirmation-email"></strong>Please open it and click
             the button inside to confirm your subscription.
           </p>
         </div>
