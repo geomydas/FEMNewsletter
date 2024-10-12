@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="
+  Join 60,000+ product managers receiving monthly updates on:
+  Product discovery and building what matters
+  Measuring to ensure updates are a success
+  And much more!
+"
+    />
+    <meta name="author" content="geomydas" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <style></style>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body
+    class="md:bg-charcoal md:flex md:min-h-screen md:flex-col md:items-center md:justify-center md:p-8"
+  >
+    <main>
+      <div
+        class="md:grid md:max-w-3xl md:grid-cols-2 md:grid-rows-1 md:items-center md:gap-8 md:rounded-2xl md:bg-white md:p-8"
+        id="part1"
+      >
+        <picture class="w-full">
+          <source
+            media="(min-width: 48rem)"
+            srcset="../images/illustration-sign-up-desktop.svg"
+            class="w-full"
+          />
+          <img
+            src="../images/illustration-sign-up-mobile.svg"
+            alt=""
+            class="w-full"
+          />
+        </picture>
+        <div class="py-6 px-4 md:-order-1 md:py-0 md:px-0">
+          <h1 class="font-roboto text-darkslate mb-4 text-4xl font-bold">
+            Stay updated!
+          </h1>
+          <p class="font-roboto text-darkslate mb-4 text-base font-normal">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="mb-8 flex flex-col gap-4">
+            <li
+              class="font-roboto text-darkslate relative flex gap-4 text-base font-normal before:content-[url(../images/icon-list.svg)]"
+            >
+              Product discovery and building what matters
+            </li>
+            <li
+              class="font-roboto text-darkslate relative flex gap-4 text-base font-normal before:content-[url(../images/icon-list.svg)]"
+            >
+              Measuring to ensure updates are a success
+            </li>
+            <li
+              class="font-roboto text-darkslate relative flex gap-4 text-base font-normal before:content-[url(../images/icon-list.svg)]"
+            >
+              And much more!
+            </li>
+          </ul>
+          <form action="" method="post" novalidate id="form">
+            <div class="flex flex-col-reverse gap-2">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email@company.com"
+                class="font-roboto outline-gray text-gray hover:outline-darkslate [&:user-invalid]:bg-tomato/25 [&:user-invalid]:outline-tomato [&:user-invalid]:text-tomato peer mb-4 block w-full rounded-lg p-3 text-base font-normal outline-1"
+              />
+              <div
+                class="flex items-center justify-between peer-[:user-invalid]:[&>span]:inline"
+              >
+                <label
+                  class="font-roboto text-darkslate text-sm font-bold" for="email"
+                  >Email address</label
+                >
+                <span
+                  class="font-roboto text-tomato hidden text-sm font-bold"
+                  aria-live="polite"
+                  >Valid email required</span
+                >
+              </div>
+            </div>
+            <button
+              id="submit  "
+              type="submit"
+              class="font-roboto bg-darkslate hover:bg-tomato hover:shadow-tomato block w-full rounded-lg py-3 px-2 text-center text-base font-bold text-white transition hover:shadow-lg"
+            >
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div
+        class="hidden min-h-screen flex-col justify-between py-8 px-4 md:min-h-0 md:max-w-sm md:rounded-2xl md:bg-white md:py-6 md:px-6"
+        id="part2"
+      >
+        <div>
+          <img src="../images/icon-success.svg" alt="" class="mb-12" />
+
+          <h2 class="font-roboto text-darkslate mb-8 text-4xl font-bold">
+            Thanks for subscribing!
+          </h2>
+          <p class="font-roboto text-base font-normal md:mb-12">
+            A confirmation email has been sent to
+            <strong id="confirmation-email"></strong> Please open it and click
+            the button inside to confirm your subscription.
+          </p>
+        </div>
+        <button
+          type="submit"
+          id="dismiss"
+          class="font-roboto bg-darkslate hover:bg-tomato hover:shadow-tomato block w-full rounded-lg py-3 px-2 text-center text-base font-bold text-white transition hover:shadow-lg"
+        >
+          Dismiss message
+        </button>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
